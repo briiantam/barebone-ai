@@ -13,22 +13,43 @@ interface FAQItemProps {
 
 const faqList: FAQItemProps[] = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
-  },
-  {
-    question: "Can I get a refund?",
+    question: "How does Barebone's AI match startups with investors?",
     answer: (
-      <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
-      </p>
+      <div className="space-y-2 text-slate-200 leading-relaxed">
+        Barebone analyzes factors like industry, stage, and funding requirements
+        to intelligently match startups with the most suitable investors,
+        streamlining the fundraising process.
+      </div>
     ),
   },
   {
-    question: "I have another question",
+    question: "What kind of outreach messages does Barebone generate?",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <div className="space-y-2 text-slate-200 leading-relaxed">
+        Barebone crafts personalized, compelling outreach messages that
+        highlight the startup's unique value proposition and align with the
+        investor's interests, increasing the chances of a positive response.
+      </div>
+    ),
+  },
+  {
+    question: "Is Barebone suitable for startups in any industry?",
+    answer: (
+      <div className="space-y-2 text-slate-200 leading-relaxed">
+        Yes, Barebone caters to startups across various industries, using AI
+        algorithms that consider industry-specific factors for accurate matching
+        and tailored messaging.
+      </div>
+    ),
+  },
+  {
+    question: "How does Barebone ensure the quality of investor matches?",
+    answer: (
+      <div className="space-y-2 text-slate-200 leading-relaxed">
+        Barebone uses advanced data analysis and machine learning, collects
+        feedback, and regularly updates its investor database to continuously
+        improve the quality and accuracy of investor matches.
+      </div>
     ),
   },
 ];
@@ -40,7 +61,7 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
   return (
     <li>
       <button
-        className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+        className="relative flex gap-2 items-center w-full py-5 text-cyan-400 font-semibold text-left border-t md:text-lg border-base-content/10"
         onClick={(e) => {
           e.preventDefault();
           setIsOpen(!isOpen);
@@ -48,7 +69,7 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
         aria-expanded={isOpen}
       >
         <span
-          className={`flex-1 text-base-content ${isOpen ? "text-primary" : ""}`}
+          className={`flex-1 text-slate-100 ${isOpen ? "text-cyan-400" : ""}`}
         >
           {item?.question}
         </span>
@@ -95,11 +116,11 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-base-200" id="faq">
+    <section className="bg-black sm:py-12 md:py-24 lg:py-24" id="faq">
       <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         <div className="flex flex-col text-left basis-1/2">
-          <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
-          <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
+          <p className="inline-block font-semibold text-cyan-400 mb-4">FAQ</p>
+          <p className="sm:text-4xl text-3xl font-extrabold text-slate-100">
             Frequently Asked Questions
           </p>
         </div>

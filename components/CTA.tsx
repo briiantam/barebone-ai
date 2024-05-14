@@ -1,33 +1,43 @@
-import Image from "next/image";
+"use client";
+import React from "react";
 import config from "@/config";
+import { BackgroundBeams } from "./BackgroundBeams";
+import { HoverBorderGradient } from "./HoverBorderGradient";
 
-const CTA = () => {
+export function CTA() {
   return (
-    <section className="relative hero overflow-hidden min-h-screen">
-      <Image
-        src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80"
-        alt="Background"
-        className="object-cover w-full"
-        fill
-      />
-      <div className="relative hero-overlay bg-neutral bg-opacity-70"></div>
-      <div className="relative hero-content text-center text-neutral-content p-8">
-        <div className="flex flex-col items-center max-w-xl p-8 md:p-0">
-          <h2 className="font-bold text-3xl md:text-5xl tracking-tight mb-8 md:mb-12">
-            Boost your app, launch, earn
-          </h2>
-          <p className="text-lg opacity-80 mb-12 md:mb-16">
-            Don&apos;t waste time integrating APIs or designing a pricing
-            section...
-          </p>
+    <div className="h-[40rem] w-full bg-black relative flex flex-col items-center justify-center antialiased">
+      <div className="max-w-2xl mx-auto p-4">
+        <h1 className="font-extrabold text-white text-4xl lg:text-6xl tracking-tight md:-mb-4 text-center mb-20">
+          Save Time Reaching Out to Investors Today
+        </h1>
 
-          <button className="btn btn-primary btn-wide">
-            Get {config.appName}
-          </button>
-        </div>
+        {/* <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
+          Welcome to MailJet, the best transactional email service on the web.
+          We provide reliable, scalable, and customizable email solutions for
+          your business. Whether you&apos;re sending order confirmations,
+          password reset emails, or promotional campaigns, MailJet has got you
+          covered.
+        </p> */}
+        {/* <input
+          type="text"
+          placeholder="Let us know your email"
+          className=" rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500  w-full relative  py-2 mt-20  bg-neutral-950 placeholder:text-neutral-4500 placeholder:text-center text-neutral-200 text-center font-semibold text-sm md:text-lg "
+        /> */}
       </div>
-    </section>
+      <div className="mt-10 flex justify-center text-center">
+        <HoverBorderGradient
+          containerClassName="rounded-full"
+          as="button"
+          className=" text-white flex items-center space-x-2 z-[1] "
+        >
+          <span>Get {config.appName}</span>
+        </HoverBorderGradient>
+      </div>
+
+      <BackgroundBeams />
+    </div>
   );
-};
+}
 
 export default CTA;

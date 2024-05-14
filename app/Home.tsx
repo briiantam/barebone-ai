@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <header className="fixed top-0 w-full z-10">
+      <header className="top-0">
         <Suspense>
           <Header />
         </Suspense>
@@ -20,7 +20,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <FeaturesAccordion />
-        {/* <Pricing /> */}
+        <Pricing />
         <FAQ />
         <CTA />
       </main>
