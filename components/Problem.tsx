@@ -2,7 +2,7 @@
 
 import { BackgroundGradient } from "./BackgroundGradient";
 import Arrow from "./Arrow";
-import { Vortex } from "./Vortex";
+// import { Vortex } from "./Vortex";
 
 const Step = ({
   emoji,
@@ -80,7 +80,7 @@ const Problem = () => {
         <div className="flex flex-col gap-2 lg:gap-4 md:mt-10 mb-20 items-center justify-center text-center lg:text-center lg:items-center">
           <Arrow extraStyle="md:-scale-x-350 md:-rotate-270" />
           <p className="text-l md:text-xl lg:text-xl opacity-80 text-slate-100 mb-40">
-            There's a better way...
+            There&apos;s a better way...
           </p>
         </div>
       </section>

@@ -27,8 +27,9 @@ const faqList: FAQItemProps[] = [
     answer: (
       <div className="space-y-2 text-slate-200 leading-relaxed">
         Barebone crafts personalized, compelling outreach messages that
-        highlight the startup's unique value proposition and align with the
-        investor's interests, increasing the chances of a positive response.
+        highlight the startup&apos;s unique value proposition and align with the
+        investor&apos;s interests, increasing the chances of a positive
+        response.
       </div>
     ),
   },

@@ -1,5 +1,5 @@
-import Image from "next/image";
-import TestimonialsAvatars from "./TestimonialsAvatars";
+// import Image from "next/image";
+// import TestimonialsAvatars from "./TestimonialsAvatars";
 import config from "@/config";
 import { AuroraBackground } from "./aurora-background";
 import Arrow from "./Arrow";
