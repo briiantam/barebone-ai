@@ -1,3 +1,7 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+const colors = require("tailwindcss/colors");
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -11,6 +15,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+      },
       backgroundImage: {
         gradient:
           "linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)",
@@ -70,7 +77,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui"), addVariablesForColors],
+  plugins: [require("daisyui", "@tailwindcss/forms"), addVariablesForColors],
   daisyui: {
     // Light & dark themes are added by default (it switches automatically based on OS settings)
     // You can add another theme among the list of 30+

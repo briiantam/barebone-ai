@@ -32,7 +32,7 @@ const ButtonSignin = ({
     return (
       <Link
         href={config.auth.callbackUrl}
-        className={`btn rounded-full bg-black border-cyan-400 hover:bg-slate-900 ${
+        className={`btn rounded-full bg-slate-800 border[-cyan-400]  hover:bg-slate-900 ${
           extraStyle ? extraStyle : ""
         }`}
       >
@@ -50,7 +50,7 @@ const ButtonSignin = ({
             {session.user?.name?.charAt(0) || session.user?.email?.charAt(0)}
           </span>
         )}
-        {session.user?.name || session.user?.email || "Account"}
+        {session.user?.name || session.user?.email || "Account"} | Launch Portal
       </Link>
     );
   }

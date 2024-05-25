@@ -42,15 +42,18 @@ const ButtonAccount = () => {
   if (status === "unauthenticated") return null;
 
   return (
-    <Popover className="relative z-10">
+    <Popover className="relative z-10 ">
       {({ open }) => (
         <>
-          <Popover.Button className="btn">
+          <Popover.Button
+            className="group flex items-center gap-x-5 rounded-md py-3 text-l bg-neutral-900 font-semibold hover:text-white hover:bg-slate-700"
+            style={{ width: "150px" }}
+          >
             {session?.user?.image ? (
               <img
                 src={session?.user?.image}
                 alt={session?.user?.name || "Account"}
-                className="w-6 h-6 rounded-full shrink-0"
+                className="w-7 h-7 ml-3 rounded-full shrink-0"
                 referrerPolicy="no-referrer"
                 width={24}
                 height={24}
@@ -62,26 +65,28 @@ const ButtonAccount = () => {
               </span>
             )}
 
-            {session?.user?.name || "Account"}
+            <span className="text-white hover:text-white flex items-center">
+              {session?.user?.name || "Account"}
 
-            {isLoading ? (
-              <span className="loading loading-spinner loading-xs"></span>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className={`w-5 h-5 duration-200 opacity-50 ${
-                  open ? "transform rotate-180 " : ""
-                }`}
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            )}
+              {isLoading ? (
+                <span className="loading loading-spinner loading-xs"></span>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className={`w-5 h-5 duration-200 opacity-50 items-align justify-center ml-4 text-white ${
+                    open ? "transform rotate-180 " : ""
+                  }`}
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              )}
+            </span>
           </Popover.Button>
           <Transition
             enter="transition duration-100 ease-out"
